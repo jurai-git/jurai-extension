@@ -1,64 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import './reset.css';
+@import './header.css';
+@import './main.css';
+@import './footer.css';
 
-body {
-    max-width: 368px;
-    padding: 16px;
-    font-family: Arial, sans-serif;
-    background-color: #1c1c1e;
-}
-
-h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    color: #9dceff;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    padding: .5rem;
-    margin-top: 1rem;
-    font-size: 1rem;
-    background-color: #98999b1f;
-    color: #98999b;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-textarea:focus {
-    outline: none;
-    border: none;
-}
-
-button {
-    width: 100%;
-    padding: 8px 16px;
-    font-size: 1rem;
-    background-color: #98999b1f;
-    color: #98999b;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 12px;
-}
-
-.buttons-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.2rem;
-    gap: 6px;
-}
-
-.buttons-group label {
+.vertical-center {
     display: flex;
     align-items: center;
-    font-size: .8rem;
-    color: #98999b;
-    text-wrap: nowrap;
+    flex-direction: column;
 }

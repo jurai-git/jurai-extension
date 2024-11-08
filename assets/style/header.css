@@ -1,0 +1,10 @@
+header {
+    padding: 1rem;
+    height: 156px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
