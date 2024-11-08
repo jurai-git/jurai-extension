@@ -10,7 +10,7 @@
     "https://jurai-git.github.io/"
   ],
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_icon": {
       "48": "./assets/img/jurai-icon.png"
     },
