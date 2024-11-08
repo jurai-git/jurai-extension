@@ -4,7 +4,9 @@
     "version": "1.0",
     "description": "JurAI - Praticidade em seus casos judiciais",
     "permissions": [
-
+        "cookies",
+        "http://jurai-git.github.io/*",
+        "https://jurai-git.github.io/*"
     ],
     "background": {
       "scripts": ["background.js"]
