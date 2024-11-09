@@ -15,11 +15,18 @@ async function getCookieFromDomain(cookieName, domain) {
     const cookiesAPI = getCookieAPI();
 
     return new Promise((resolve, reject) => {
-        cookiesAPI.get({ name: cookieName, url: `https://${domain}` }, (cookie) => {
+        cookiesAPI.get({
+            url: `https://${domain}/`,
+            name: cookieName
+        }, (cookie) => {
             if (chrome.runtime.lastError || browser.runtime.lastError) {
-                reject(new Error('Failed to access cookie'));
+                reject(
+                    new Error(`Failed to access cookie: ${chrome.runtime.lastError || browser.runtime.lastError}`)
+                );
             } else {
-                resolve(cookie ? cookie.value : null);
+                if (!cookie) {
+                    resolve(null);
+                }
             }
         });
     });
