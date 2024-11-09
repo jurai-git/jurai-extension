@@ -1,0 +1,14 @@
+footer {
+    margin-top: auto;
+    padding: 1.5rem 2rem;
+}
+
+footer p {
+    color: #9dceff;
+    font-size: .8rem;
+    text-align: center;
+}
+
+footer a {
+    color: #1565C0;
+}

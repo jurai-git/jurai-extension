@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurAI - Análise Processual</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script type="module" src="./assets/script/main.js" defer></script>
+</head>
+
+<body> 
+    <header class="header-shadow">
+        <div class="logo-container">
+            <a href="https://jurai-git.github.io/advogado/dashboard.html">
+                <img src="./assets/img/jurai.png" alt="JurAI - Logo">
+            </a>
+        </div>
+
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="dots"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="https://jurai-git.github.io/advogado/dashboard.html">Dashboard</a></li>
+                    <li><a href="https://jurai-git.github.io/advogado/conta.html">Meu Perfil</a></li>
+                    <hr>
+                    <li> <button id="logout" aria-label="Logout">Sair</button> </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Análise Processual</h1>
+        <textarea placeholder="Digite sua ementa aqui..." aria-label="Ementa" required></textarea>
+
+        <div class="buttons-group">
+            <label> <input type="checkbox" checked> Probabilidade </label>
+            <label> <input type="checkbox" checked> Melhor Argumento </label>
+            <label> <input type="checkbox" checked> Gerar Documento </label>
+        </div>
+
+        <button>Processar</button>
+    </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "JurAI",
+  "version": "1.0.0",
+  "description": "JurAI - Praticidade em seus casos judiciais",
+  "author": "JurAI Team",
+  "permissions": [
+      "tabs",
+      "cookies",
+      "storage",
+      "http://jurai-git.github.io/*",
+      "https://jurai-git.github.io/*",
+      "https://cors-anywhere.herokuapp.com/*",
+      "https://jurai-server-production.up.railway.app/*"
+  ],
+  "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": {
+          "16": "./assets/img/icons/icon16.png",
+          "32": "./assets/img/icons/icon32.png",
+          "48": "./assets/img/icons/icon48.png",
+          "128": "./assets/img/icons/icon128.png"
+      },
+      "default_title": "JurAI"
+  },
+  "icons": {
+      "16": "./assets/img/icons/icon16.png",
+      "32": "./assets/img/icons/icon32.png",
+      "48": "./assets/img/icons/icon48.png",
+      "128": "./assets/img/icons/icon128.png"
+  },
+  "content_scripts": [
+      {
+          "matches": [
+              "*://*.jurai-git.github.io/*"
+          ]
+      }
+  ],
+  "web_accessible_resources": [
+      "assets/img/*",
+      "assets/style/*",
+      "assets/script/*",
+      "*.html"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "homepage_url": "https://jurai-git.github.io"
+}
