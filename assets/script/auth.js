@@ -1,20 +1,5 @@
 const domain = 'jurai-git.github.io';
-
-function redirectToLoginPage() {
-    // const loginUrl = `https://${domain}/login`;
-
-    window.location.href = 'http://127.0.0.1:5500/login.html'
-
-    // if (typeof chrome !== 'undefined') {
-    //     chrome.tabs.create({ url: loginUrl }, function () {
-    //         window.close();
-    //     });
-    // } else if (typeof browser !== 'undefined') {
-    //     browser.tabs.create({ url: loginUrl }).then(function () {
-    //         window.close();
-    //     });
-    // }
-}
+const cookieName = 'access_token';
 
 function getCookieAPI() {
     if (typeof browser !== 'undefined') {
@@ -42,15 +27,33 @@ async function getCookieFromDomain(cookieName, domain) {
 
 (async () => {
     try {
-        const accessToken = await getCookieFromDomain('access_token', domain);
+        const accessToken = await getCookieFromDomain(cookieName, domain);
 
         if (accessToken) {
             console.log('Access Token: ', accessToken);
         } else {
             console.warn(`Cookie "access_token" was not found in the domain ${domain}`);
-            redirectToLoginPage();
+            window.location.href = 'login.html'
         }
     } catch (error) {
         console.error('Error getting cookie: ', error.message);
     }
 })();
+
+
+document.getElementById('logout').addEventListener('click', () => {
+    const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+    
+    browserAPI.cookies.remove({
+        url: `https://${domain}/`,
+        name: cookieName
+    }, (details) => {
+        if (details) {
+            console.log('Cookie deletado:', details);
+        } else {
+            console.log('Não foi possível deletar o cookie');
+        }
+    });
+
+    window.location.href = 'index.html'
+});
