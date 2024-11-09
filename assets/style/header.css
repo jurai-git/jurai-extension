@@ -1,5 +1,5 @@
 header {
-    padding: 1rem 2rem;
+    padding: .4rem 2rem;
     max-height: 156px;
     display: flex;
     align-items: center;
@@ -9,12 +9,17 @@ header {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-img {
+header img {
     display: block;
     margin: auto;
     height: 100%;
+    margin-top: 2rem;
 }
 
 .logo-container {
     height: 52px;
+}
+
+.logo-container img {
+    margin-top: 0;
 }
