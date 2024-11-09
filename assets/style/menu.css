@@ -86,7 +86,8 @@
     z-index: 1;
 }
 
-.toggler:checked~.menu {
+.toggler:hover~.menu, 
+.menu:hover {
     opacity: 1;
     visibility: visible;
 }
