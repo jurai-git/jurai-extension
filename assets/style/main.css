@@ -2,32 +2,36 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 2rem 1rem;
     gap: .4rem;
+    position: relative;
 }
 
-form {
-    width: 100%;
-}
 form {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-top: 1.2rem;
+    height: 100%;
+    width: 100%;
 }
 
 textarea {
     width: 100%;
-    min-height: 150px;
-    max-height: 250px;
+    max-height: 280px;
+    flex: 1;
     padding: 1rem;
     background: rgba(var(--surface-rgb), .5);
-    border: 1px solid rgba(157, 206, 255, .2);
+    border: none;
     border-radius: 6px;
     color: var(--text);
     font-size: .8rem;
-    resize: vertical;
+    resize: none;
     transition: border-color .3s;
+}
+
+textarea:focus {
+    border: 1px solid rgba(157, 206, 255, .2);
 }
 
 input,
@@ -64,6 +68,7 @@ button {
 .buttons-group {
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
 }
 
 .buttons-group label {
