@@ -1,14 +1,19 @@
 footer {
     margin-top: auto;
     padding: 1.5rem 2rem;
+    text-align: center;
 }
 
 footer p {
     color: #9dceff;
     font-size: .8rem;
-    text-align: center;
 }
 
 footer a {
     color: #1565C0;
+}
+
+footer small {
+    color: var(--primary);
+    font-size: .675rem;
 }

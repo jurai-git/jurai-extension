@@ -1,30 +1,33 @@
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
     padding: 1.5rem 2rem;
+    gap: .4rem;
 }
 
 form {
     width: 100%;
+}
+form {
+    display: flex;
+    flex-direction: column;
     gap: 8px;
     margin-top: 1.2rem;
 }
 
 textarea {
     width: 100%;
-    height: 100px;
-    padding: .5rem;
-    margin-top: 1rem;
-    font-size: 1rem;
-    background-color: #98999b1f;
-    color: #98999b;
-    border: none;
-    outline: none;
-    border-radius: 4px;
+    min-height: 150px;
+    max-height: 250px;
+    padding: 1rem;
+    background: rgba(var(--surface-rgb), .5);
+    border: 1px solid rgba(157, 206, 255, .2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: .8rem;
     resize: vertical;
+    transition: border-color .3s;
 }
 
 input,
@@ -37,6 +40,12 @@ button {
     border-radius: 4px;
     border: none;
     outline: none;
+    transition: opacity .3s;
+}
+
+input:hover,
+button:hover {
+    opacity: .9;
 }
 
 button {
@@ -55,14 +64,16 @@ button {
 .buttons-group {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.2rem;
-    gap: 6px;
 }
 
 .buttons-group label {
     display: flex;
     align-items: center;
     font-size: .8rem;
-    color: #98999b;
+    color: var(--text-secondary);
     text-wrap: nowrap;
+}
+
+.buttons-group input[type="checkbox"] {
+    margin-right: 3px;
 }

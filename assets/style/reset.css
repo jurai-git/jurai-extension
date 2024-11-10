@@ -4,6 +4,7 @@
     --primary: #9dceff;
     --background: #1c1c1e;
     --surface: #2c2c2e;
+    --surface-rgb: 44, 44, 46;
     --text: #ffffff;
     --text-secondary: #98999b;
 }
@@ -22,6 +23,10 @@
     border: none;
 }
 
+::placeholder {
+    color: var(--text-secondary);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -32,9 +37,10 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
-    text-align: center;
     color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 a {

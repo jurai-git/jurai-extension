@@ -37,15 +37,27 @@
 
     <main>
         <h1>Análise Processual</h1>
-        <textarea placeholder="Digite sua ementa aqui..." aria-label="Ementa" required></textarea>
 
-        <div class="buttons-group">
-            <label> <input type="checkbox" checked> Probabilidade </label>
-            <label> <input type="checkbox" checked> Melhor Argumento </label>
-            <label> <input type="checkbox" checked> Gerar Documento </label>
-        </div>
+        <form id="analysis-form">
+            <textarea 
+                maxlength="2048" 
+                placeholder="Digite sua ementa aqui..." 
+                aria-label="Ementa" 
+                required
+            ></textarea>
 
-        <button>Processar</button>
+            <div class="buttons-group">
+                <label> <input type="checkbox" id="probability" checked> Probabilidade </label>
+                <label> <input type="checkbox" id="argument" checked> Argumentos </label>
+                <label> <input type="checkbox" id="document" checked> Documento </label>
+            </div>
+
+            <button type="submit">Processar</button>
+        </form>
     </main>
+
+    <footer>
+        <small>A inteligência que facilita o processo | © 2024 JurAI</small>
+    </footer>
 </body>
 </html>
