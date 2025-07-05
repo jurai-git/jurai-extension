@@ -1,0 +1,72 @@
+{
+    "manifest_version": 3,
+    "name": "JurAI",
+    "version": "1.0.0",
+    "description": "JurAI - Praticidade em seus casos judiciais",
+    "author": "JurAI Team",
+    "permissions": [
+        "tabs",
+        "cookies",
+        "storage"
+    ],
+    "host_permissions": [
+        "http://jurai-git.github.io/*",
+        "https://jurai-git.github.io/*",
+        "https://cors-anywhere.herokuapp.com/*",
+        "https://jurai-server-production.up.railway.app/*"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "./assets/img/icons/icon16.png",
+            "32": "./assets/img/icons/icon32.png",
+            "48": "./assets/img/icons/icon48.png",
+            "128": "./assets/img/icons/icon128.png"
+        },
+        "default_title": "JurAI"
+    },
+    "icons": {
+        "16": "./assets/img/icons/icon16.png",
+        "32": "./assets/img/icons/icon32.png",
+        "48": "./assets/img/icons/icon48.png",
+        "128": "./assets/img/icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "assets/script/main.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.jurai-git.github.io/*",
+                "http://*.jurai-git.github.io/*"
+            ],
+            "js": [
+                "assets/script/main.js"
+            ],
+            "css": [
+                "assets/style/style.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/img/",
+                "assets/style/",
+                "assets/script/",
+                ".html"
+            ],
+            "matches": [
+                "https://*.jurai-git.github.io/*",
+                "http://*.jurai-git.github.io/*"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'",
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals"
+    },
+    "homepage_url": "https://jurai-git.github.io",
+    "minimum_chrome_version": "88"
+}
